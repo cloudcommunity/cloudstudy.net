@@ -1,0 +1,5 @@
+/ -> index
+/events/ -> events overview
+/events/:event_title -> event detail page
+/privacy
+/terms

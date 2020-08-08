@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
 
     <style amp-custom>
         header {
@@ -119,7 +120,18 @@
             <amp-img src="/logo.png" layout="fixed" height="100" width="100" alt="Cloud Study Network Logo"></amp-img>
             Cloud Study Network
         </h1>
-        <hr>
+
+        <button on="tap:sidebar.toggle">Menu</button>
+
+        <amp-sidebar id="sidebar" layout="nodisplay" side="left">
+            <ul>
+                <li><button on="tap:sidebar.close">Close</button></li>
+                <li><a href="">Home</a></li>
+                <li><a href="#events" on="tap:events.scrollTo">Upcoming events</a></li>
+                <li><a href="#members" on="tap:members.scrollTo">Members</a></li>
+                <li><a href="">Something else</a></li>
+            </ul>
+        </amp-sidebar>
     </header>
     <main>
         <p>Cloud Study Network is a community by tech-enthusiasts ...<br>
@@ -131,51 +143,60 @@
             amet est placerat in egestas erat imperdiet sed. Egestas purus viverra accumsan in nisl nisi scelerisque eu
             ultrices. Ut tortor pretium viverra suspendisse potenti nullam.
         </p>
-        <h2>Upcoming events</h2>
-        <div>
-            <h3>Event title</h3>
-            <p>Starts at MM/DD/YYYY HH:MM</p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam erat. At quis
-                risus sed vulputate odio ut enim blandit volutpat. At in tellus integer feugiat scelerisque. Interdum
-                varius sit amet mattis vulputate enim nulla aliquet. Aliquet nibh praesent tristique magna sit amet. Sed
-                augue lacus viverra vitae congue. Viverra nam libero justo laoreet sit amet. Viverra tellus in hac
-                habitasse platea. Sit amet est placerat in egestas erat imperdiet sed. Egestas purus viverra accumsan in
-                nisl nisi scelerisque eu ultrices. Ut tortor pretium viverra suspendisse potenti nullam.
-            </p>
+        <div id="events">
+            <h2>Upcoming events</h2>
+            <div>
+                <h3>Event title</h3>
+                <p>Starts at MM/DD/YYYY HH:MM</p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam erat. At quis
+                    risus sed vulputate odio ut enim blandit volutpat. At in tellus integer feugiat scelerisque.
+                    Interdum
+                    varius sit amet mattis vulputate enim nulla aliquet. Aliquet nibh praesent tristique magna sit amet.
+                    Sed
+                    augue lacus viverra vitae congue. Viverra nam libero justo laoreet sit amet. Viverra tellus in hac
+                    habitasse platea. Sit amet est placerat in egestas erat imperdiet sed. Egestas purus viverra
+                    accumsan in
+                    nisl nisi scelerisque eu ultrices. Ut tortor pretium viverra suspendisse potenti nullam.
+                </p>
+            </div>
+            <a href="/events">See everything</a>
         </div>
-        <h3>Community members</h3>
-        <div class="member-grid">
-            <div class="member-avatar">
-                <amp-img
-                    src="https://avatars0.githubusercontent.com/u/123498?s=460&u=7c5815f875dfdaeb88732514bc1feee8d3eefaa0&v=4"
-                    layout="responsive" height="1" width="1"></amp-img>
-            </div>
-            <div class="member-avatar">
-                <amp-img
-                    src="https://avatars0.githubusercontent.com/u/123498?s=460&u=7c5815f875dfdaeb88732514bc1feee8d3eefaa0&v=4"
-                    layout="responsive" height="1" width="1"></amp-img>
-            </div>
-            <div class="member-avatar">
-                <amp-img
-                    src="https://avatars0.githubusercontent.com/u/123498?s=460&u=7c5815f875dfdaeb88732514bc1feee8d3eefaa0&v=4"
-                    layout="responsive" height="1" width="1"></amp-img>
-            </div>
-            <div class="member-avatar">
-                <amp-img
-                    src="https://avatars0.githubusercontent.com/u/123498?s=460&u=7c5815f875dfdaeb88732514bc1feee8d3eefaa0&v=4"
-                    layout="responsive" height="1" width="1"></amp-img>
-            </div>
-            <div class="member-avatar">
-                <amp-img
-                    src="https://avatars0.githubusercontent.com/u/123498?s=460&u=7c5815f875dfdaeb88732514bc1feee8d3eefaa0&v=4"
-                    layout="responsive" height="1" width="1"></amp-img>
-            </div>
-            <div class="member-avatar">
-                <amp-img
-                    src="https://avatars0.githubusercontent.com/u/123498?s=460&u=7c5815f875dfdaeb88732514bc1feee8d3eefaa0&v=4"
-                    layout="responsive" height="1" width="1"></amp-img>
+        <div id="members">
+            <h3>Community members</h3>
+            <div class="member-grid">
+                <div class="member-avatar">
+                    <amp-img
+                        src="https://avatars0.githubusercontent.com/u/123498?s=460&u=7c5815f875dfdaeb88732514bc1feee8d3eefaa0&v=4"
+                        layout="responsive" height="1" width="1"></amp-img>
+                </div>
+                <div class="member-avatar">
+                    <amp-img
+                        src="https://avatars0.githubusercontent.com/u/123498?s=460&u=7c5815f875dfdaeb88732514bc1feee8d3eefaa0&v=4"
+                        layout="responsive" height="1" width="1"></amp-img>
+                </div>
+                <div class="member-avatar">
+                    <amp-img
+                        src="https://avatars0.githubusercontent.com/u/123498?s=460&u=7c5815f875dfdaeb88732514bc1feee8d3eefaa0&v=4"
+                        layout="responsive" height="1" width="1"></amp-img>
+                </div>
+                <div class="member-avatar">
+                    <amp-img
+                        src="https://avatars0.githubusercontent.com/u/123498?s=460&u=7c5815f875dfdaeb88732514bc1feee8d3eefaa0&v=4"
+                        layout="responsive" height="1" width="1"></amp-img>
+                </div>
+                <div class="member-avatar">
+                    <amp-img
+                        src="https://avatars0.githubusercontent.com/u/123498?s=460&u=7c5815f875dfdaeb88732514bc1feee8d3eefaa0&v=4"
+                        layout="responsive" height="1" width="1"></amp-img>
+                </div>
+                <div class="member-avatar">
+                    <amp-img
+                        src="https://avatars0.githubusercontent.com/u/123498?s=460&u=7c5815f875dfdaeb88732514bc1feee8d3eefaa0&v=4"
+                        layout="responsive" height="1" width="1"></amp-img>
+                </div>
             </div>
         </div>
     </main>
@@ -204,4 +225,5 @@
         </div>
     </footer>
 </body>
+
 </html>
