@@ -28,12 +28,15 @@ collections:
   index:
     output: false
 
+permalink: /:title/
+
 defaults:
   - scope:
       path: ''
       type: posts
     values:
       layout: post
+      permalink: /articles/:title/
   - scope:
       path: ''
       type: events
@@ -41,8 +44,10 @@ defaults:
       layout: event
       subtitle:
       title:
+      permalink: /events/:year/:month/:title/
   - scope:
       path: ''
       type: authors
     values:
       layout: author
+      permalink: /members/:title/
