@@ -1,0 +1,14 @@
+---
+layout: page
+---
+
+{% assign sections = site.index | sort: 'position' %}
+{% for section in sections %}
+
+{% if section.no_title %}
+<h2>{{ section.title }}</h2>
+{% endif %}
+
+{{ section.content | markdownify }}
+
+{% endfor %}

@@ -3,6 +3,9 @@ start:   2020-08-15 16:00 +0200
 end:     2020-08-15 18:00 +0200
 youtube: https://www.youtube.com/watch?v=g3GEC4HP1O8
 meetup: https://www.meetup.com/Cloud-Study-Network/events/272453320/
+organizers:
+- Karen
+- Lukas
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et

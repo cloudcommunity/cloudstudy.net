@@ -1,4 +1,4 @@
-title: Cloud Community Website
+title: Cloud Study Network
 description:
 baseurl: ""
 url: ""
@@ -23,6 +23,10 @@ collections:
     output: true
   posts:
     output: true
+  events:
+    output: true
+  index:
+    output: false
 
 defaults:
   - scope:

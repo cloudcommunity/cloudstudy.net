@@ -1,0 +1,8 @@
+---
+title: Community Members
+position: 3
+---
+
+{% for member in site.authors %}
+<a href="{{ site.baseurl }}{{ member.url }}">{{ member.title }}</a>
+{% endfor %}

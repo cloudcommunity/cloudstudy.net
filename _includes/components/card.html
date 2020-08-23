@@ -1,0 +1,5 @@
+<div class="card">
+    <h3>{{ p.title }}</h3>
+    <p>{{ p.content | strip_html | truncate: 140 }}</p>
+    <a href="{{ p.url }}" class="btn">Read more</a>
+</div>
