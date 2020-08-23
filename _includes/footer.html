@@ -1,0 +1,24 @@
+<footer>
+    <hr>
+
+    <div>
+        {% for social_link in site.data.social_links %}
+        <a href="{{ social_link.url }}">
+            {% include {{ social_link.icon | prepend: 'icons/logo-' | append: '.svg' }} %}
+
+            {{ social_link.title }}
+        </a>
+        {% endfor %}
+
+    </div>
+    <div>
+        {% for footer_link in site.data.footer_links %}
+        <a href="{{ site.baseurl }}{{ footer_link.url }}">{{ footer_link.title }}</a>
+        
+        {% if forloop.last %}
+        {% else %}
+        –
+        {% endif %}
+        {% endfor %}
+    </div>
+</footer>

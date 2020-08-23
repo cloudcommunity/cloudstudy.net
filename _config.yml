@@ -1,0 +1,44 @@
+title: Cloud Community Website
+description:
+baseurl: ""
+url: ""
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - old/
+  - LICENSE
+  - README.md
+
+collections:
+  authors:
+    output: true
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ''
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ''
+      type: events
+    values:
+      layout: event
+      subtitle:
+      title:
+  - scope:
+      path: ''
+      type: authors
+    values:
+      layout: author
