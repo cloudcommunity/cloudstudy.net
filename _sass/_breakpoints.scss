@@ -1,0 +1,23 @@
+@mixin breakpoint($label) {
+    @if $label=='mobile' {
+        @media (max-width: 599px) {
+            @content;
+        }
+    }
+
+    @else if $label=='tablet' {
+        @media (min-width: 600px) {
+            @content;
+        }
+    }
+
+    @else if $label=='desktop' {
+        @media (min-width: 1000px) {
+            @content;
+        }
+    }
+
+    @else{
+        @error "the breakpoint label (#{label}) should either be mobile, tablet or desktop";
+    }
+}

@@ -7,13 +7,21 @@
 {% include head.html %}
 
 <body>
-{% include header.html %}
+    {% include header.html %}
 
-<main>
-{{ content }}
-</main>
+    <main>
+        <div class="primary-navigation">
+            {% include components/navigation.html %}
+        </div>
+        <div class="content">
+            {{ content }}
+        </div>
+        <div class="secondary-navigation">
+            <h3>Some secondary actions (to implement)</h3>
+        </div>
+    </main>
 
-{% include footer.html %}
+    {% include footer.html %}
 </body>
 
 </html>

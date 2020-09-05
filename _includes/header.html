@@ -1,17 +1,9 @@
 <header>
-    <h1>
-        <amp-img src="/logo.png" layout="fixed" height="100" width="100" alt="Cloud Study Network Logo"></amp-img>
+    <amp-img src="/assets/images/logo.png" layout="fixed" height="48" width="48" alt="Cloud Study Network Logo" noloading></amp-img>
+    <span class="brand">
         {{ site.title }}
-    </h1>
+    </span>
 
-    <button on="tap:sidebar.toggle">Menu</button>
-
-    <amp-sidebar id="sidebar" layout="nodisplay" side="left">
-        <ul>
-            <li><button on="tap:sidebar.close">Close</button></li>
-            <li><a href="/">Home</a></li>
-            <li><a href="/events/">Events</a></li>
-            <li><a href="/authors">Members</a></li>
-        </ul>
-    </amp-sidebar>
+    <button id="toggle-sidebar" on="tap:sidebar.toggle">Menu</button>
+    {% include components/sidebar.html %}
 </header>

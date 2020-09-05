@@ -1,0 +1,45 @@
+@import '_header.scss';
+@import '_breakpoints.scss';
+@import '_variables.scss';
+
+main {
+    margin-top: $header-height;
+    padding: 0;
+
+    @include breakpoint('desktop') {
+        display: grid;
+        grid-template-columns: auto min(60%) auto;
+    }
+
+    .primary-navigation {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                color: $primary;
+                font-size: 1.3rem;
+                font-family: sans-serif;
+                padding: 1rem 2rem;
+                height: 3rem;
+
+                &.selected {
+                    border-top-right-radius: 1.5rem;
+                    border-bottom-right-radius: 1.5rem;
+                    background: $accent;
+                    color: $background-color;
+                    @include elevation($primary, 1);
+                }
+            }
+        }
+    }
+
+    .content {
+        margin: 1rem;
+        padding: 1rem;
+
+        background: $background-color;
+        @include elevation($primary, 1);
+    }
+}

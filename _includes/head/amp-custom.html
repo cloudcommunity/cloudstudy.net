@@ -1,35 +1,7 @@
-
-    <style amp-custom>
-        header {
-            text-align: center;
-        }
-
-        main {
-            max-width: 800px;
-            margin: auto;
-        }
-
-        footer {
-            text-align: center;
-        }
-
-        .card {
-            width: 200px;
-            height: 100px;
-        }
-
-        .member-grid {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .member-avatar {
-            width: 150px;
-            margin: 8px;
-            flex: 1;
-        }
-
-        .member-avatar amp-img {
-            border-radius: 16px;
-        }
-    </style>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<style amp-custom>
+    {% capture scss %}
+    @import "index.scss";
+    {% endcapture %}
+    {{ scss | scssify }}
+</style>

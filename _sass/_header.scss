@@ -1,0 +1,56 @@
+@import "_breakpoints.scss";
+@import "_variables.scss";
+
+// SCSS:
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    background-color: $background-color;
+    @include elevation($primary, 1);
+    height: $header-height;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    
+    #toggle-sidebar {
+        display: none;
+
+        @include breakpoint('mobile') {
+
+            display: inline;
+
+        }
+    }
+
+    .brand {
+        margin: .4rem 0 0 .4rem;
+        font-size: 2rem;
+        font-family: 'Bebas Neue', cursive;
+    }
+}
+
+.example {
+    .elevation1 {
+        @include elevation($accent, 1);
+        height: 100px;
+        width: 100px;
+        margin: 1rem;
+    }
+
+    .elevation2 {
+        @include elevation($accent, 2);
+        height: 100px;
+        width: 100px;
+        margin: 1rem;
+    }
+
+    .elevation3 {
+        @include elevation($accent, 3);
+        height: 100px;
+        width: 100px;
+        margin: 1rem;
+    }
+}
